@@ -5,6 +5,8 @@
   object-fit: cover;
   min-height: 100vh;
   position: relative;
+  color: #535353;
+  background: #ffffff;
   grid-column-start: 1;
   grid-column-end: -1;
 }

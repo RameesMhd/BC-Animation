@@ -74,24 +74,45 @@ function PlasmicHomepage__RenderFunc(props) {
           >
             <ph.DataCtxReader>
               {$ctx => (
-                <section
-                  data-plasmic-name={"section"}
-                  data-plasmic-override={overrides.section}
-                  className={classNames(projectcss.all, sty.section)}
-                >
+                <React.Fragment>
+                  <section
+                    data-plasmic-name={"section"}
+                    data-plasmic-override={overrides.section}
+                    className={classNames(projectcss.all, sty.section)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__titT5
+                      )}
+                    >
+                      {"Scroll Animation Using React Js"}
+                    </h1>
+                    <div
+                      data-plasmic-name={"text"}
+                      data-plasmic-override={overrides.text}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text
+                      )}
+                    >
+                      {"This is a test text"}
+                    </div>
+                  </section>
                   <h1
-                    data-plasmic-name={"h1"}
-                    data-plasmic-override={overrides.h1}
                     className={classNames(
                       projectcss.all,
                       projectcss.h1,
                       projectcss.__wab_text,
-                      sty.h1
+                      sty.h1__fgDwF
                     )}
                   >
-                    {"Scroll Animation Using React Js"}
+                    {"Test Text "}
                   </h1>
-                </section>
+                </React.Fragment>
               )}
             </ph.DataCtxReader>
           </PageLayout>
@@ -102,10 +123,10 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "pageLayout", "section", "h1"],
-  pageLayout: ["pageLayout", "section", "h1"],
-  section: ["section", "h1"],
-  h1: ["h1"]
+  root: ["root", "pageLayout", "section", "text"],
+  pageLayout: ["pageLayout", "section", "text"],
+  section: ["section", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -143,7 +164,7 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     pageLayout: makeNodeComponent("pageLayout"),
     section: makeNodeComponent("section"),
-    h1: makeNodeComponent("h1"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

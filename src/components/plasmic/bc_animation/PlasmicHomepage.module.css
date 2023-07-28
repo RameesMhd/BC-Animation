@@ -47,10 +47,25 @@
 :where(.section > *) {
   grid-column: 4;
 }
-.h1 {
+.h1__titT5 {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 800px;
+  min-width: 0;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.h1__fgDwF {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: #ff0404;
   min-width: 0;
 }
